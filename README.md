@@ -1,1 +1,3 @@
-# youtube_clone
+# Youtube_Clone
+
+This is my attempt at cloning YouTube!
