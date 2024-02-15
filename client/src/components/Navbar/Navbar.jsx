@@ -4,7 +4,7 @@ import Logo from "../../assets/Youtube_logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import MicIcon from "@mui/icons-material/Mic";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import SignIn from "../SignIn/SignIn.jsx";
 
 const Navbar = () => {
   return (
@@ -28,10 +28,7 @@ const Navbar = () => {
       </div>
       <div className="userOptions">
         <MoreVertIcon className="more"/>
-        <div className="signIn">
-          <AccountCircleOutlinedIcon className="account"/>
-          <span>Sign In</span>
-        </div>
+        <SignIn />
       </div>
     </div>
   );

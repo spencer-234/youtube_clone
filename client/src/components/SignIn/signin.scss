@@ -1,0 +1,14 @@
+.signIn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+
+    .account {
+        font-size: 2.5rem;
+    }
+}
