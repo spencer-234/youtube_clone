@@ -8,8 +8,13 @@
     padding: 5px 10px;
     border: 1px solid lightgray;
     border-radius: 25px;
+    color: rgb(50, 120, 250);
 
     .account {
         font-size: 2.5rem;
     }
+}
+
+.signIn:hover {
+    background-color: rgba(178, 222, 248, 0.5);
 }
