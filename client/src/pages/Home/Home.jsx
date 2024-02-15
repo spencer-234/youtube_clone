@@ -13,7 +13,7 @@ const Home = () => {
             <div className="mainPage">
                 <HomeTabs />
                 <div className="videos">
-                    {homeData.map(video => (<Video data={video} />))}
+                    {homeData.map(video => (<Video data={video} key={video.video.videoId}/>))}
                 </div>
             </div>
         </div>

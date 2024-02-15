@@ -13,7 +13,7 @@ const HomeTabs = () => {
                 <li>Dramedy</li>
                 <li>Live</li>
                 <li>Algorithms</li>
-                <li>Computes</li>
+                <li>Computers</li>
                 <li>Gadgets</li>
                 <li>Smartphones</li>
                 <li>NBA</li>
