@@ -35,7 +35,11 @@
             }
 
             li:hover, .selected {
-                background-color: rgb(226, 226, 226);
+                background-color: rgb(241, 241, 241);
+            }
+
+            .selected {
+                font-weight: 500;
             }
         }
     }
