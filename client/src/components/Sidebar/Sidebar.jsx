@@ -27,6 +27,9 @@ import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import AnnouncementOutlinedIcon from '@mui/icons-material/AnnouncementOutlined';
 
+// import Sign in component for sidebar
+import SignIn from "../SignIn/SignIn.jsx";
+
 const Sidebar = () => {
     return (
         <nav className="sidebar">
@@ -58,8 +61,9 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </section>
-            <section>
-                <span>Sign in to like videos, comment, and subscribe.</span>
+            <section className="signInSection">
+                <span>Sign in to like videos,<br />comment, and subscribe.</span>
+                <SignIn />
             </section>
             <section>
                 <h2>Explore</h2>
