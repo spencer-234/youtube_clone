@@ -14,7 +14,8 @@ const Home = () => {
             .then(res => {
                 return res.data;
             })
-            .catch(err => console.error(err))
+            .catch(err => console.error(err)),
+        staleTime: Infinity,
     })
 
     return (
