@@ -9,10 +9,10 @@ const Video = ({ data }) => {
             <Link to={`https://www.youtube.com/watch?v=${data.video.videoId}`}>
                 <img src={data.video.thumbnails[0].url} alt="Video Thumbnail" className="thumbnail"/>
                 <div className="videoBox">
-                    <img src={data.video.author.avatar[0].url} alt="Creator profile picture" />
+                    {data.video.author && <img src={data.video.author.avatar[0].url} alt="Creator profile picture" />}
                     <div className="videoInfo">
                         <h2>{data.video.title}</h2>
-                        <h3>{data.video.author.title}</h3>
+                        {data.video.author && <h3>{data.video.author.title}</h3>}
                         <span>{data.video.stats.views} views &#8226; {data.video.publishedTimeText}</span>
                     </div>
                 </div>
