@@ -8,7 +8,7 @@ import SignIn from "../SignIn/SignIn.jsx";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="logoOptions">
         <div className="menuIcon">
           <MenuIcon className="menuButton" />
@@ -30,7 +30,7 @@ const Navbar = () => {
         <MoreVertIcon className="more"/>
         <SignIn />
       </div>
-    </div>
+    </nav>
   );
 };
 
