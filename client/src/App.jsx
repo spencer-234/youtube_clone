@@ -4,17 +4,20 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import Navbar from './components/Navbar/Navbar.jsx';
 import Home from './pages/Home/Home.jsx';
 
 const App = () => {
 
+  const queryClient = new QueryClient();
+
   const Layout = () => {
     return (
-      <>
+      <QueryClientProvider client={queryClient}>
         <Navbar />
         <Outlet />
-      </>
+      </QueryClientProvider>
     )
   }
 
