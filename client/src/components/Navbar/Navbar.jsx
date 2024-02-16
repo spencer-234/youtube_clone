@@ -20,9 +20,13 @@ const Navbar = () => {
       </div>
       <div className="searchOptions">
         <div className="searchBar">
-          <SearchIcon className="displayOnClick"/>
-          <input type="text" placeholder="Search" />
-          <SearchIcon className="searchIcon"/>
+          <div className="searchBarLeft">
+              <SearchIcon className="searchDisplayOnClick searchIcon" />
+              <input type="text" placeholder="Search" />
+          </div>
+          <div className="searchBarRight">
+              <SearchIcon className="searchIcon"/>
+          </div>
         </div>
         <MicIcon className="microphone"/>
       </div>

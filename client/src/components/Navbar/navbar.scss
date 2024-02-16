@@ -42,25 +42,43 @@
         .searchBar {
             display: flex;
             align-items: center;
-            border: 1px solid lightgray;
-            border-radius: 25px;
-            padding: 10px 15px;
-            width: 750px;
+            width: fit-content;
 
-            .displayOnClick {
-                font-size: 2rem;
-                margin-right: 10px;
+            .searchBarLeft, .searchBarRight {
+                display: flex;
+                align-items: center;
+
+                .searchIcon {
+                    font-size: 2.5rem;
+                }
             }
 
-            input {
-                border: none;
-                font-size: 1.6rem;
-                outline: none;
+            .searchBarLeft {
+                gap: 10px;
+                border-left: 1px solid lightgray;
+                border-top: 1px solid lightgray;
+                border-bottom: 1px solid lightgray;
+                border-radius: 25px 0 0 25px;
+                padding: 6px 0 6px 10px;
+
+                input {
+                    font-size: 1.5rem;
+                    width: 500px;
+                    border: none;
+                    outline: none;
+                }
             }
 
-            .searchIcon {
-                margin-left: auto;
-                font-size: 2rem;
+            .searchBarRight {
+                border: 1px solid lightgray;
+                border-radius: 0 25px 25px 0;
+                padding: 6px 10px;
+                cursor: pointer;
+                background-color: rgba(240, 240, 240, 0.7);
+            }
+
+            .searchBarRight:hover {
+                background-color: rgb(240, 240, 240);
             }
         }
 
