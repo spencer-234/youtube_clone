@@ -12,13 +12,15 @@ const Video = ({ data }) => {
     return (
         <div className="video">
             <Link to={`https://www.youtube.com/watch?v=${data.video.videoId}`}>
-                <img src={data.video.thumbnails[0].url} alt="Video Thumbnail" className="thumbnail"/>
-                <span className="time">
-                    {vidHours === 0
-                    ? `${vidMinutes}:${vidSeconds}`
-                    : `${vidHours}:${vidMinutes}:${vidSeconds}`
-                    }
-                </span>
+                <div className="thumbnailBox">
+                    <img src={data.video.thumbnails[0].url} alt="Video Thumbnail" className="thumbnail"/>
+                    <span className="time">
+                        {vidHours === 0
+                        ? `${vidMinutes}:${vidSeconds}`
+                        : `${vidHours}:${vidMinutes}:${vidSeconds}`
+                        }
+                    </span>
+                </div>
                 <div className="videoBox">
                     {data.video.author
                     &&

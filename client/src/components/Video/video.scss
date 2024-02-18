@@ -3,29 +3,36 @@
 .video {
     flex: 1 1 auto;
     height: fit-content;
-    position: relative;
+    margin-bottom: 20px;
 
     a, a:visited {
         color: black;
         text-decoration: none;
     }
 
-    .thumbnail {
+    .thumbnailBox {
         width: 100%;
+        height: fit-content;
         margin-bottom: 10px;
+        position: relative;
+
+        .thumbnail {
+            width: 100%;
+        }
+    
+        .time {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            border-radius: 5px;
+            position: absolute;
+            top: 86%;
+            right: 1%;
+        }
     }
 
-    .time {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 5px;
-        font-size: 1.3rem;
-        font-weight: 500;
-        border-radius: 5px;
-        position: absolute;
-        top: 257px;
-        right: 7px;
-    }
 
     .videoBox {
         display: flex;
@@ -64,15 +71,31 @@
 @media screen and (min-width: responsive.$tablet) {
     .video {
         width: 350px;
+        margin-bottom: 0;
 
-        .thumbnail {
-            border-radius: 15px;
+        .thumbnailBox {
+            
+            .thumbnail {
+                border-radius: 15px;
+            }
+
+            .time {
+                top: 85%;
+            }
         }
+
     }
 }
 
 @media screen and (min-width: responsive.$tabletPro) {
     .video {
         width: 450px;
+
+        .thumbnailBox {
+
+            .time {
+                top: 89%;
+            }
+        }
     }
 }
