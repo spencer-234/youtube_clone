@@ -25,12 +25,12 @@ const App = () => {
     {
       path: "/",
       element: <Layout />,
-      children: [
-        {
-          path: "/",
-          element: <Home />
-        },
-      ]
+      // children: [
+      //   {
+      //     path: "/",
+      //     element: <Home />
+      //   },
+      // ]
     }
   ])
 

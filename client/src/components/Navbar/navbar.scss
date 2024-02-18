@@ -1,105 +1,139 @@
+@use "../../responsive.scss" as responsive;
+
 .navbar {
-    height: 50px;
+  height: 50px;
+  display: flex;
+  width: 100%;
+  min-width: 240px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  position: relative;
+  top: 0;
+
+  .logoOptions {
     display: flex;
-    width: 100%;
-    padding: 10px;
     align-items: center;
-    justify-content: space-between;
+    gap: 20px;
 
-    .logoOptions {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        
-        .menuIcon {
-
-            .menuButton {
-                font-size: 25px;
-            }
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            img {
-                width: 30px;
-                height: 20px;
-            }
-
-            h1 {
-                letter-spacing: -1px;
-                font-size: 2rem;
-            }
-        }
+    .menuIcon {
+      display: none;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      img {
+        width: 30px;
+        height: 20px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .searchOptions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .searchBar {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+
+      .searchBarLeft {
+        display: none;
+      }
+
+      .searchBarRight {
+        display: flex;
+        align-items: center;
+
+        .searchIcon {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .microphone {
+      font-size: 2.5rem;
+    }
+  }
+
+  .userOptions {
+    display: none;
+  }
+}
+
+@media screen and (min-width: responsive.$tablet) {
+  .navbar {
     .searchOptions {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        
-        .searchBar {
+      margin: 0 auto;
+
+      .searchBar {
+
+        .searchBarLeft,
+        .searchBarRight {
+          display: flex;
+          align-items: center;
+        }
+
+        .searchBarLeft {
+          gap: 10px;
+          border-left: 1px solid lightgray;
+          border-top: 1px solid lightgray;
+          border-bottom: 1px solid lightgray;
+          border-radius: 25px 0 0 25px;
+          padding: 5px 0 5px 10px;
+
+          input {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            width: 500px;
+            border: none;
+            outline: none;
+          }
+        }
+
+        .searchBarRight {
+          border: 1px solid lightgray;
+          border-radius: 0 25px 25px 0;
+          padding: 8.5px 10px;
+          cursor: pointer;
+          background-color: rgba(240, 240, 240, 0.7);
+        }
+
+        .searchBarRight:hover {
+          background-color: rgb(240, 240, 240);
+        }
+      }
+
+      .microphone {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: responsive.$tabletPro) {
+    .navbar {
+        .userOptions {
             display: flex;
             align-items: center;
-            width: fit-content;
-
-            .searchBarLeft, .searchBarRight {
-                display: flex;
-                align-items: center;
-
-                .searchIcon {
-                    font-size: 2rem;
-                }
+            width: 152px;
+            justify-content: space-between;
+     
+     
+            .more {
+                font-size: 3rem;
             }
-
-            .searchBarLeft {
-                gap: 10px;
-                border-left: 1px solid lightgray;
-                border-top: 1px solid lightgray;
-                border-bottom: 1px solid lightgray;
-                border-radius: 25px 0 0 25px;
-                padding: 5px 0 5px 10px;
-
-                .searchDisplayOnClick {
-                    display: none;
-                }
-
-                input {
-                    font-size: 1.5rem;
-                    padding: .5rem;
-                    width: 500px;
-                    border: none;
-                    outline: none;
-                }
-            }
-
-            .searchBarRight {
-                border: 1px solid lightgray;
-                border-radius: 0 25px 25px 0;
-                padding: 8.5px 10px;
-                cursor: pointer;
-                background-color: rgba(240, 240, 240, 0.7);
-            }
-
-            .searchBarRight:hover {
-                background-color: rgb(240, 240, 240);
-            }
-        }
-
-        .microphone {
-            font-size: 2.5rem;
-        }
-    }
-
-    .userOptions {
-        display: flex;
-        align-items: center;
-        width: 152px;
-        justify-content: space-between;
-
-        .more {
-            font-size: 3rem;
         }
     }
 }
