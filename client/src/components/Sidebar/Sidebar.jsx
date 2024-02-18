@@ -26,6 +26,8 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import FlagOutlinedIcon from '@mui/icons-material/FlagOutlined';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
 import AnnouncementOutlinedIcon from '@mui/icons-material/AnnouncementOutlined';
+import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 // import Sign in component for sidebar
 import SignIn from "../SignIn/SignIn.jsx";
@@ -33,7 +35,7 @@ import SignIn from "../SignIn/SignIn.jsx";
 const Sidebar = () => {
     return (
         <nav className="sidebar">
-            <section>
+            <section className="partialSidebar">
                 <ul>
                     <li className="selected">
                         <HomeIcon className="icon"/>
@@ -43,13 +45,20 @@ const Sidebar = () => {
                         <img src={ShortsIcon} alt="shorts icon" className="icon"/>
                         Shorts
                     </li>
+                    <li className="postButton">
+                        <AddCircleOutlineIcon className="addIcon" />
+                    </li>
                     <li>
                         <RecentActorsIcon className="icon" />
                         Subscriptions
                     </li>
+                    <li>
+                        <AccountCircleOutlinedIcon className="icon" />
+                        You
+                    </li>
                 </ul>
             </section>
-            <section>
+            <section className="fullSidebar">
                 <ul>
                     <li>
                         <VideoLibraryIcon className="icon" />
@@ -61,11 +70,11 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </section>
-            <section className="signInSection">
+            <section className="signInSection fullSidebar">
                 <span>Sign in to like videos,<br />comment, and subscribe.</span>
                 <SignIn />
             </section>
-            <section>
+            <section className="fullSidebar">
                 <h2>Explore</h2>
                 <ul>
                     <li>
@@ -114,7 +123,7 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </section>
-            <section>
+            <section className="fullSidebar">
                 <ul>
                     <li>
                         <AddCircleOutlineOutlinedIcon className="icon" />
@@ -122,7 +131,7 @@ const Sidebar = () => {
                     </li>
                 </ul>
             </section>
-            <section>
+            <section className="fullSidebar">
                 <h2>More from YouTube</h2>
                 <ul>
                    <li>
@@ -143,7 +152,7 @@ const Sidebar = () => {
                     </li> 
                 </ul>
             </section>
-            <section>
+            <section className="fullSidebar">
                 <ul>
                     <li>
                         <SettingsOutlinedIcon className="icon" />

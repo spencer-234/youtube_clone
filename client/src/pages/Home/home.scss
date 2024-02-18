@@ -1,10 +1,11 @@
 .home {
     display: flex;
+    position: relative;
 
-    .mainPage {
+    .videosContainer {
         display: flex;
         width: 100%;
-        height: calc(100vh - 50px);
+        margin-top: 50px;
         flex-direction: column;
         padding: 20px 20px 0px 20px;
 

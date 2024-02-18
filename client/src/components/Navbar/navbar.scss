@@ -8,9 +8,10 @@
   padding: 10px;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid black;
-  position: relative;
+  position: sticky;
   top: 0;
+  z-index: 999;
+  background-color: white;
 
   .logoOptions {
     display: flex;
@@ -54,6 +55,7 @@
       .searchBarRight {
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         .searchIcon {
           font-size: 2rem;
@@ -105,17 +107,12 @@
           border: 1px solid lightgray;
           border-radius: 0 25px 25px 0;
           padding: 8.5px 10px;
-          cursor: pointer;
           background-color: rgba(240, 240, 240, 0.7);
         }
 
         .searchBarRight:hover {
           background-color: rgb(240, 240, 240);
         }
-      }
-
-      .microphone {
-        font-size: 2.5rem;
       }
     }
   }
@@ -133,6 +130,7 @@
      
             .more {
                 font-size: 3rem;
+                cursor: pointer;
             }
         }
     }
