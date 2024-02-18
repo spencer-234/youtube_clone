@@ -10,7 +10,7 @@
         flex-wrap: wrap;
         column-gap: 20px;
         row-gap: 60px;
-        margin-top: 30px;
+        margin-top: 80px;
         width: 100%;
         padding: 10px;
         justify-content: center;
@@ -21,9 +21,5 @@
     .home {
         margin-left: 250px;
         width: calc(100% - 250px);
-
-        .videos {
-            margin-top: 50px;
-        }
     }
 }

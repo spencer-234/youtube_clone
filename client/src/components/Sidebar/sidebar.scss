@@ -48,6 +48,16 @@
     }
 }
 
+.sidebar::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+
+
 @media screen and (min-width: responsive.$tabletPro) {
     .sidebar {
         flex-direction: column;
