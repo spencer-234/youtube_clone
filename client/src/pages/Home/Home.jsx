@@ -20,16 +20,14 @@ const Home = () => {
 
     return (
         <div className="home">
-            <div className="videosContainer">
-                {/* <HomeTabs />
-                <div className="videos">
-                    {isLoading
-                    ? "Loading"
-                    : data.contents.map((video) => <Video data={video} key={video.video.videoId} />)}
-                </div> */}
-                <div className="videos">
-                    {homeData.map((video) => <Video data={video} key={video.videoId} />)}
-                </div>
+            <HomeTabs />
+            {/* <div className="videos">
+                {isLoading
+                ? "Loading"
+                : data.contents.map((video) => <Video data={video} key={video.video.videoId} />)}
+            </div> */}
+            <div className="videos">
+                {homeData.map((video) => <Video data={video} key={video.videoId} />)}
             </div>
         </div>
     )

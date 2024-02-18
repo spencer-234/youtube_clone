@@ -1,22 +1,21 @@
+@use "../../responsive.scss" as responsive;
+
 .home {
     display: flex;
-    position: relative;
-
-    .videosContainer {
+    flex-direction: column;
+    .videos {
         display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 60px;
+        margin-top: 30px;
         width: 100%;
-        margin-top: 50px;
-        flex-direction: column;
-        padding: 20px 20px 0px 20px;
+    }
+}
 
-        .videos {
-            display: flex;
-            flex-wrap: wrap;
-            column-gap: 20px;
-            row-gap: 60px;
-            margin-top: 30px;
-            width: 100%;
-            overflow: auto;
-        }
+@media screen and (min-width: responsive.$tabletPro) {
+    .home {
+        margin-left: 270px;
+        width: calc(100% - 270px);
     }
 }
