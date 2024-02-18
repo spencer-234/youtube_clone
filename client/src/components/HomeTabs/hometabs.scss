@@ -2,6 +2,7 @@
 
 .homeTabs {
     width: 100%;
+    background-color: white;
 
     ul {
         display: flex;
@@ -35,6 +36,9 @@
 
 @media screen and (min-width: responsive.$tablet) {
     .homeTabs {
+        position: fixed;
+        top: 50;
+
         ul {
             li {
                 font-size: 1.5rem;

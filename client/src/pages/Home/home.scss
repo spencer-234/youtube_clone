@@ -3,6 +3,8 @@
 .home {
     display: flex;
     flex-direction: column;
+    position: relative;
+
     .videos {
         display: flex;
         flex-wrap: wrap;
@@ -19,5 +21,9 @@
     .home {
         margin-left: 250px;
         width: calc(100% - 250px);
+
+        .videos {
+            margin-top: 50px;
+        }
     }
 }
