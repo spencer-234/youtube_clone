@@ -41,7 +41,7 @@
   .searchOptions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
 
     .searchBar {
       display: flex;
@@ -76,6 +76,7 @@
 @media screen and (min-width: responsive.$tablet) {
   .navbar {
     .logoOptions {
+      margin-right: 5px;
       .menuIcon {
         display: flex;
         align-items: center;
@@ -132,6 +133,15 @@
 
 @media screen and (min-width: responsive.$tabletPro) {
     .navbar {
+
+        .logoOptions {
+          margin-right: 0;
+        }
+
+        .searchOptions {
+          gap: 10px;
+        }
+
         .userOptions {
             display: flex;
             align-items: center;
