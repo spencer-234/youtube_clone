@@ -65,7 +65,7 @@
         height: calc(100% - 50px);
         position: fixed;
         left: 0;
-        overflow: auto;
+        overflow: hidden;
 
         .fullSidebar {
             display: flex;
@@ -138,4 +138,7 @@
             font-size: 1.7rem;
         }
      }
+    .sidebar:hover {
+        overflow-y: scroll;
+    }
 }

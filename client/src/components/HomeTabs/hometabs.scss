@@ -8,7 +8,7 @@
         display: flex;
         align-items: center;
         width: 100%;
-        overflow: auto;
+        overflow: hidden;
         list-style-type: none;
         padding: 10px 5px;
         gap: 10px;
@@ -32,6 +32,19 @@
             color: white;
         }
     }
+
+    ul:hover {
+        overflow-x: scroll;
+    }
+
+    ul::-webkit-scrollbar {
+        background-color: transparent;
+        height: 3px;
+    }
+    
+    ul::-webkit-scrollbar-thumb {
+        background-color: gray;
+    }
 }
 
 @media screen and (min-width: responsive.$tablet) {
@@ -43,15 +56,6 @@
             li {
                 font-size: 1.5rem;
             }
-        }
-
-        ul::-webkit-scrollbar {
-            background-color: transparent;
-            height: 3px;
-        }
-        
-        ul::-webkit-scrollbar-thumb {
-            background-color: gray;
         }
     }
 }
