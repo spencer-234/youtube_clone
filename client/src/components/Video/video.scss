@@ -3,6 +3,7 @@
 .video {
     flex: 1 1 auto;
     height: fit-content;
+    position: relative;
 
     a, a:visited {
         color: black;
@@ -12,6 +13,18 @@
     .thumbnail {
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    .time {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        border-radius: 5px;
+        position: absolute;
+        top: 257px;
+        right: 7px;
     }
 
     .videoBox {
@@ -24,6 +37,7 @@
             border-radius: 50%;
             object-fit: cover;
         }
+        
 
         .videoInfo {
             padding-top: 5px;
@@ -38,6 +52,10 @@
                 font-weight: 400;
                 font-size: 1.4rem;
                 color: rgb(85, 85, 85);
+            }
+
+            h3:hover {
+                color: rgb(0, 0, 0);
             }
         }
     }

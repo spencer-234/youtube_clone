@@ -25,7 +25,7 @@ const Home = () => {
                 {/* {isLoading
                 ? "Loading"
                 : data.contents.map((video) => <Video data={video} key={video.video.videoId} />)} */}
-                {homeData.map((video) => <Video data={video} key={video.videoId} />)}
+                {homeData.map((video) => <Video data={video} key={video.video.videoId} />)}
             </div>
         </div>
     )
