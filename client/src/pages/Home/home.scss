@@ -9,7 +9,7 @@
         display: flex;
         flex-wrap: wrap;
         column-gap: 20px;
-        row-gap: 60px;
+        row-gap: 10px;
         margin-top: 10px;
         width: 100%;
         padding: 0px;
@@ -23,6 +23,7 @@
         .videos {
             padding: 10px;
             margin-top: 55px;
+            row-gap: 40px;
         }
     }
 }
@@ -31,5 +32,9 @@
     .home {
         margin-left: 250px;
         width: calc(100% - 250px);
+
+        .videos {
+            row-gap: 60px;
+        }
     }
 }
