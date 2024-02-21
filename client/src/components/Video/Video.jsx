@@ -9,37 +9,39 @@ const Video = ({ data }) => {
     const vidMinutes = String(Math.floor(vidLength / 60)).padStart(2, "0");
     const vidSeconds = String(vidLength % 60).padStart(2, "0");
 
+    const handleClick = () => {
+        window.location.href = `https://www.youtube.com/watch?v=${data.video.videoId}`;
+    }
+
     return (
-        <div className="video">
-            <Link to={`https://www.youtube.com/watch?v=${data.video.videoId}`}>
-                <div className="thumbnailBox">
-                    <img src={data.video.thumbnails[0].url} alt="Video Thumbnail" className="thumbnail"/>
-                    <span className="time">
-                        {vidHours === 0
-                        ? `${vidMinutes}:${vidSeconds}`
-                        : `${vidHours}:${vidMinutes}:${vidSeconds}`
-                        }
-                    </span>
-                </div>
-                <div className="videoBox">
-                    {data.video.author
-                    &&
-                    <Link to={`https://www.youtube.com${data.video.author.canonicalBaseUrl}`}>
-                        <img src={data.video.author.avatar[0].url} alt="Creator profile picture" />
-                    </Link> 
+        <div className="video" onClick={handleClick}>
+            <div className="thumbnailBox">
+                <img src={data.video.thumbnails[0].url} alt="Video Thumbnail" className="thumbnail"/>
+                <span className="time">
+                    {vidHours === 0
+                    ? `${vidMinutes}:${vidSeconds}`
+                    : `${vidHours}:${vidMinutes}:${vidSeconds}`
                     }
-                    <div className="videoInfo">
-                        <h2>{data.video.title}</h2>
-                        {data.video.author
-                         &&
-                         <Link to={`https://www.youtube.com${data.video.author.canonicalBaseUrl}`}>
-                            <h3>{data.video.author.title}</h3>
-                         </Link> 
-                        }
-                        <span>{data.video.stats.views} views &#8226; {data.video.publishedTimeText}</span>
-                    </div>
+                </span>
+            </div>
+            <div className="videoBox">
+                {data.video.author
+                &&
+                <Link to={`https://www.youtube.com${data.video.author.canonicalBaseUrl}`}>
+                    <img src={data.video.author.avatar[0].url} alt="Creator profile picture" />
+                </Link> 
+                }
+                <div className="videoInfo">
+                    <h2>{data.video.title}</h2>
+                    {data.video.author
+                        &&
+                        <Link to={`https://www.youtube.com${data.video.author.canonicalBaseUrl}`}>
+                        <h3>{data.video.author.title}</h3>
+                        </Link> 
+                    }
+                    <span>{data.video.stats.views} views &#8226; {data.video.publishedTimeText}</span>
                 </div>
-            </Link>
+            </div>
         </div>
     )
 }
