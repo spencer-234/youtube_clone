@@ -1,5 +1,7 @@
 # Youtube_Clone
 
-This is my attempt at cloning YouTube!
+## If the request limit is reached for the api error code 429 will display. Daily limit of 100 currently.
 
-I'm currently focusing on recreating the home page. Progress is up at https://youtube-clone-3igk.onrender.com
+This is my attempt of making the homepage of YouTube.
+
+Progress is up at https://youtube-clone-3igk.onrender.com
