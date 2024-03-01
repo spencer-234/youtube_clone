@@ -1,5 +1,7 @@
 import axios from "axios";
 
+// function to retrieve data from api
+
 export const makeRequest = axios.create({
     method: 'GET',
     baseURL: 'https://youtube138.p.rapidapi.com',

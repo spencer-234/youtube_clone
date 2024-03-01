@@ -15,6 +15,7 @@
         height: fit-content;
         margin-bottom: 10px;
         position: relative;
+        cursor: pointer;
 
         .thumbnail {
             width: 100%;
@@ -54,6 +55,7 @@
                 font-weight: 500;
                 font-size: 1.6rem;
                 margin-bottom: 10px;
+                cursor: pointer;
             }
 
             h3, span {
@@ -107,5 +109,11 @@
                 top: 89%;
             }
         }
+    }
+}
+
+@media screen and (min-width: responsive.$widescreen) {
+    .video {
+        max-width: 500px;
     }
 }
